@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# A script that displays To infinity and beyond indefinitely.
+
+cleanup_sigterm() {
+	echo "I hate the kill command"
+	
+	exit
+}
+
+cleanup_sigint() {
+	echo "Y U no love me?!"
+}
+
+cleanup_sigquit() {
+	rm /var/run/myscript.pid
+
+	exit
+}
+
+trap cleanup_sigterm SIGTERM
+trap cleanup_sigint SIGINT
+trap cleanup_sigquite SIGQUIT
+
+echo "$$" > /var/run/myscript.pid
+
+while true
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
