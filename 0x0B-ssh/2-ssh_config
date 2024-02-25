@@ -1,0 +1,5 @@
+# ssh cinet config
+
+Host *
+	PasswordAuthentication no
+	IdentifyFile ~/.ssh/school
