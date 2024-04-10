@@ -9,7 +9,7 @@ def recurse(subreddit, hot_list=[], after="", count=0):
             f"https://www.reddit.com/r/{subreddit}/about.json",
             headers={
                 "User-Agent": "Mozilla/10.0/API"
-                }
+                },
             params={
                 "after": after,
                 "count": count,
