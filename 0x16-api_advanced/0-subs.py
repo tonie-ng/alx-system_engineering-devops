@@ -11,9 +11,9 @@ def number_of_subscribers(subreddit):
     Returns: 0 if no valuid subreddit
     """
     res = requests.get(
-            "https://www.reddit.com/r/{}/about.json".format(subreddit),
+            f"https://www.reddit.com/r/{subreddit}/about.json",
             headers={
-                "User-Agent": "Custom",
+                "User-Agent": "Mozilla/5.0",
                 },
             allow_redirects=False,
             )
