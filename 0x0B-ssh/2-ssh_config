@@ -1,5 +1,5 @@
-# ssh cinet config
+# ssh clinet config
 
 Host *
 	PasswordAuthentication no
-	IdentifyFile ~/.ssh/school
+	IdentityFile ~/.ssh/school
